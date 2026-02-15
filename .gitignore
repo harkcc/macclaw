@@ -1,0 +1,9 @@
+# OpenClaw runtime state / secrets
+.openclaw/
+
+# Personal memory / logs
+memory/
+MEMORY.md
+
+# macOS
+.DS_Store
