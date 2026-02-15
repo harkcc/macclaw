@@ -6,8 +6,12 @@
 
 Next (薄切片优先):
 1) 把“ERP 已有字段 vs 前台缺失字段”做成一张对照表（Top20 字段）。
-2) eMAG 前台字段勘探结论：JSON-LD 不足/可能不存在；优先从页面 `window.EM.listingGlobals` 抽取 items（id/name/category/vendor/availability/badges 等），并用 DOM 解析补齐价格与 SKU（从 URL 提取）。
-3) 反爬策略：AWS WAF Captcha 触发敏感；先按“有头浏览器低频过一次验证码→复用 cookie 用 request 高频”的路线验证可行性；遇验证码就暂停并记日志，等你在场处理。
-4) 需要你提供/确认：
-   - 你同事验证的“cookie 复用 + request 高频”具体口径（有效 cookie 哪些键、有效期/刷新条件）
-   - 最小需要抓取的字段 Top10（用于第一版表格输出）
+2) eMAG 前台字段勘探结论：类目页 JSON-LD 不作为主方案；优先从页面 `window.EM.listingGlobals` 抽取 items（id/name/category/vendor/availability/badges 等），并用 DOM 解析补齐价格与 SKU（从 URL 提取）。
+3) 前台采集需要区分两类页面：
+   - 类目页（列表/筛选/分页）
+   - 单品页（详情、近10评论、属性词、卖家信息等；可能走另一套数据源）
+4) 反爬策略（你反馈）：可能“空cookie+requests”也能跑；我们会用最小实验先验证（限速+抽样）。若触发验证码/403，则降级为“有头浏览器过一次→复用cookie池→requests”。
+5) 运行节奏：已设置每30分钟推进汇报（cron），以及早/晚 checkpoint。
+6) 需要你提供/确认：
+   - 单品页你说的“最简单接口”示例 URL（给我一个具体产品链接即可）
+   - 第一版输出字段 Top10（用于表格与中间层 schema）
