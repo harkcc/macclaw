@@ -25,6 +25,11 @@ Things like:
 
 - home-server → 192.168.1.100, user: admin
 
+### Storage (external "Big Data" drive)
+
+- Purpose: store large datasets and oversized project assets (user: 500GB external drive)
+- Rule: anything placed there must also be recorded in a local index (name → external path → notes) so it can be found later
+
 ### TTS
 
 - Preferred voice: "Nova" (warm, slightly British)
