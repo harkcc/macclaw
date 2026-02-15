@@ -38,6 +38,12 @@ Goal: **not lose context**, **easy to find**, **rollbackable**, and **reduce cha
 
 ## Indexing the external drive (mandatory)
 
+### Standard locations (confirmed)
+
+- **Volume name**: `OpenClawData`
+- **Big objects root**: `/Volumes/OpenClawData/bigdata/`
+- **OpenClaw memory root**: `/Volumes/OpenClawData/openclaw/workspace/memory/`
+
 ### Files
 - `bigdata/INDEX.csv` (source of truth for the index)
 - `bigdata/INDEX.md` (optional human-friendly view)

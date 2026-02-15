@@ -1,5 +1,9 @@
 # Big Data Drive Index
 
+Confirmed standard locations:
+- Volume: `OpenClawData`
+- Big objects root: `/Volumes/OpenClawData/bigdata/`
+
 Source of truth: `INDEX.csv`.
 
 ## How to add an entry
