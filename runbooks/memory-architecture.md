@@ -118,6 +118,14 @@ Each important change ends with a short note:
 - 3–8 bullets summary
 - pointers to git paths and external drive paths
 
+## Use macOS-native systems (capability policy)
+
+- Notes: default knowledge base + decision summaries.
+- Reminders: important reminders + project next actions.
+- Messages: optional alerts/confirmations (always ask before sending).
+- Browser automation: use Chrome Relay for logged-in flows; isolated browser for public browsing.
+- See: `runbooks/macos-capabilities.md`
+
 ---
 
 ## Memory hygiene / cleanup
