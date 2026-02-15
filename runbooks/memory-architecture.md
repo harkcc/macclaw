@@ -8,6 +8,7 @@ Goal: **not lose context**, **easy to find**, **rollbackable**, and **reduce cha
 2) **No secrets in git**: tokens/API keys/login exports never go into this repo.
 3) **Big files go to external drive** ("Big Data" drive) **with a local index**.
 4) **Every decision becomes a record**: either an ADR (decision) or a PROGRESS entry (project).
+5) **Session governance**: prefer starting a new chat/session once a topic phase is complete; use context compaction only as a temporary bridge.
 
 ---
 
@@ -63,6 +64,34 @@ Goal: **not lose context**, **easy to find**, **rollbackable**, and **reduce cha
 1) Copy/move data to the external drive.
 2) Add/update a row in `bigdata/INDEX.csv`.
 3) If it impacts a project, add a line to `projects/<slug>/PROGRESS.md`.
+
+---
+
+## Session governance (trigger + actions)
+
+### When to start a new chat/session (preferred)
+Start a new chat/session when:
+- the topic changes (project A -> project B), or
+- we reached a phase boundary (decision made, config applied, a runbook written), or
+- the UI shows repeated `Compacting context...`, or
+- we notice early-message details are getting fuzzy.
+
+### When to compact context and continue (temporary)
+Compact and continue when:
+- we are mid-procedure and cannot safely stop yet (ongoing debug / step-by-step verification), and
+- we still need immediate access to the last few turns.
+
+### Mandatory 60-second checkpoint (before switching sessions)
+Before switching sessions, capture:
+- decisions made (1–3 bullets)
+- next step (1 bullet)
+- pointers (paths, commands, external drive locations)
+
+Promote to the right layer:
+- ops/how-to -> `runbooks/`
+- project progress -> `projects/<slug>/PROGRESS.md`
+- big objects -> `bigdata/INDEX.csv`
+- decisions -> Notes + (optional) sanitized ADR in git
 
 ---
 

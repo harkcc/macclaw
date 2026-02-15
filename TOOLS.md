@@ -30,6 +30,12 @@ Things like:
 - Purpose: store large datasets and oversized project assets (user: 500GB external drive)
 - Rule: anything placed there must also be recorded in a local index (name → external path → notes) so it can be found later
 
+### Session governance (avoid context loss)
+
+- Prefer starting a new chat/session at topic/phase boundaries.
+- Use "Compacting context" only as a temporary bridge mid-procedure.
+- Before switching sessions: do a 60-second checkpoint (decisions/next step/pointers) and promote to runbooks/projects/index/Notes.
+
 ### TTS
 
 - Preferred voice: "Nova" (warm, slightly British)
