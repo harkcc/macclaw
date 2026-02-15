@@ -81,8 +81,14 @@ Compact and continue when:
 - we are mid-procedure and cannot safely stop yet (ongoing debug / step-by-step verification), and
 - we still need immediate access to the last few turns.
 
-### Mandatory 60-second checkpoint (before switching sessions)
-Before switching sessions, capture:
+### Mandatory pre-switch check + 60-second checkpoint (before switching sessions)
+Before switching sessions (starting a new chat/session), do both:
+
+**Pre-switch check (verify persistence):**
+- Confirm the important items have been written to the right layer (git runbook/project/index and/or Notes).
+- If anything is only "in chat", write it down first.
+
+**60-second checkpoint (capture):**
 - decisions made (1–3 bullets)
 - next step (1 bullet)
 - pointers (paths, commands, external drive locations)
@@ -111,3 +117,27 @@ Folders:
 Each important change ends with a short note:
 - 3–8 bullets summary
 - pointers to git paths and external drive paths
+
+---
+
+## Memory hygiene / cleanup
+
+Problem: daily logs and rules can accumulate; obsolete notes can confuse future work.
+
+### What we clean
+- L1 daily logs: remove/ignore noise; keep only what helps resume work.
+- L3 rules/decisions: if a new rule supersedes an old one, mark the old one as **superseded** and link to the replacement.
+- Index entries: keep (never delete) but mark entries as archived/deleted with notes.
+
+### Cadence
+- **Weekly (or after major changes):** 10–20 min review.
+- **Monthly:** prune/merge long-running topics into a single ADR/runbook.
+
+### Method
+1) Identify what changed (new rule / new preferred path / new workflow).
+2) Update the authoritative doc (runbook/ADR).
+3) Add a short note in daily log referencing the authoritative update.
+4) Tag old material as `SUPERSEDED:` with a pointer to the new source.
+
+### Never do automatically
+- Deleting raw history without an explicit user request.

@@ -34,7 +34,8 @@ Things like:
 
 - Prefer starting a new chat/session at topic/phase boundaries.
 - Use "Compacting context" only as a temporary bridge mid-procedure.
-- Before switching sessions: do a 60-second checkpoint (decisions/next step/pointers) and promote to runbooks/projects/index/Notes.
+- Before switching sessions: **verify persistence** (important items written to git/Notes/index) + do a 60-second checkpoint (decisions/next step/pointers) and promote to runbooks/projects/index/Notes.
+- Periodically do **memory hygiene**: mark outdated rules as SUPERSEDED and point to the replacement (don’t silently delete).
 
 ### TTS
 
