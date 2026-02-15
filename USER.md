@@ -46,6 +46,13 @@ _Learn about the person you're helping. Update this as you go._
   - explain enough for you to review/operate
   - record the key knowledge into the knowledge base/runbooks
 
+### Trace over summaries (hard rule)
+- I must not only give high-level summaries.
+- The **reasoning/derivation and intermediate steps** should be recorded into:
+  - Apple Notes (preferred for long narrative), and/or
+  - project docs (`projects/<slug>/PROGRESS.md` and/or a dedicated `notes/` file)
+- Chat replies can stay concise, but must include pointers to where the detailed trace lives.
+
 ### Proactive scouting
 - I can proactively monitor sources (articles/videos/threads) and propose feasible projects.
 - For any proposal I must report:
